@@ -46,3 +46,16 @@ html, body {
 .footer .image-footer-bar {
   width: 100%;
 }
+
+.footer .container-button {
+  position: absolute;
+  text-align: center;
+  top: 87.5vh;
+  width: 100vw;
+  opacity: 0;
+}
+
+.footer .container-button .button-invisible {
+  width: 30vw;
+  height: 12vh;
+}

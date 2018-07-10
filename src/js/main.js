@@ -16,10 +16,8 @@ $(document).ready(function() {
   }
 });
 
-
-$('#ocbc_card').bind('click touchstart', function() {
-  // window.scrollTo(0,1);
-  document.body.requestFullscreen();
-}, false);
+$('#button_scan').bind('click touchstart', function() {
+  // window.alert('hello');
+});
 
 
