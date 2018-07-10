@@ -1,0 +1,19 @@
+.header {
+  height: 10vh;
+  text-align: center;
+}
+
+.body {
+  height: 80vh;
+}
+
+.footer {
+  height: 10vh;
+  background-color: aqua;
+}
+
+.image-ocbc-card {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
