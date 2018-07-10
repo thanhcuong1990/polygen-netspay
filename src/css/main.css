@@ -23,7 +23,7 @@ html, body {
 }
 
 .body {
-  height: 80vh;
+  height: 67.5vh;
 }
 
 .body .cards {
@@ -40,6 +40,9 @@ html, body {
 
 .footer {
   height: 10vh;
-  background-color: aqua;
+  width: 100vw;
 }
 
+.footer .image-footer-bar {
+  width: 100%;
+}
