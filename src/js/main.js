@@ -5,5 +5,8 @@ var cards = new Vue({
   }
 })
 
-document.body.requestFullscreen();
-window.scrollTo(0,1);
+$('#ocbc_card').bind('click touchstart', function() {
+  document.body.requestFullscreen();
+}, false);
+
+// window.scrollTo(0,1);
