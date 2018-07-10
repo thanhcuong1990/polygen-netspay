@@ -4,3 +4,5 @@ var cards = new Vue({
     value: 'DEFAULT VALUE'
   }
 })
+
+window.scrollTo(0,1);
