@@ -1,0 +1,23 @@
+{
+  "name": "polygen-netspay",
+  "version": "1.0.0",
+  "description": "polyfintech100",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlieangriawan/polygen-netspay.git"
+  },
+  "author": "Charlie Angriawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlieangriawan/polygen-netspay/issues"
+  },
+  "homepage": "https://github.com/charlieangriawan/polygen-netspay#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
