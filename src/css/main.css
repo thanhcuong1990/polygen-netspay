@@ -6,12 +6,36 @@ html, body {
 }
 
 .header {
-  height: 10vh;
+  height: 9vh;
   text-align: center;
+}
+
+.header .image-netsPay-logo {
+  width: 35vw;
+  margin-top: 15px;
+}
+
+.header .image-add-icon {
+  position: absolute;
+  width: 7vw;
+  right: 17.5px;
+  margin-top: 17.5px;
 }
 
 .body {
   height: 80vh;
+}
+
+.body .cards {
+  color: blue;
+  margin-left: 4vw;
+}
+
+.body .image-ocbc-card {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100vw;
 }
 
 .footer {
@@ -19,8 +43,3 @@ html, body {
   background-color: aqua;
 }
 
-.image-ocbc-card {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
