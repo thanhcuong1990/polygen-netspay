@@ -2,7 +2,7 @@ html, body {
     position: fixed;
     height: 100%;
     min-width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .header {
@@ -23,7 +23,7 @@ html, body {
 }
 
 .body {
-  height: 67.5vh;
+  height: 70vh;
 }
 
 .body .cards {
