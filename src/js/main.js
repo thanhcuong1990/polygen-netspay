@@ -6,4 +6,4 @@ var cards = new Vue({
 })
 
 document.body.requestFullscreen();
-//document.documentElement.requestFullscreen();
+window.scrollTo(0,1);
