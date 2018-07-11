@@ -16,14 +16,15 @@ $(document).ready(function() {
   }
 });
 
-$('#page_camera').hide();
-$('#button_scan').bind('click touchstart', function() {
-    $('#page_camera').show();
-    $('#page_wallet').hide();
-});
+$('#page_wallet').hide();
+// $('#page_camera').hide();
+// $('#button_scan').bind('click touchstart', function() {
+//     $('#page_camera').show();
+//     $('#page_wallet').hide();
+// });
 
-$('#button_wallet').bind('click touchstart', function() {
-  $('#page_camera').hide();
-  $('#page_wallet').show();
-});
+// $('#button_wallet').bind('click touchstart', function() {
+//   $('#page_camera').hide();
+//   $('#page_wallet').show();
+// });
 
