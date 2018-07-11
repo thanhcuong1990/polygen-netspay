@@ -38,7 +38,13 @@ html, body {
   width: 100vw;
 }
 
+.body .camera-window {
+  width: 100vw;
+  height: auto;
+}
+
 .footer {
+  position: relative;
   height: 10vh;
   width: 100vw;
 }
@@ -50,7 +56,7 @@ html, body {
 .footer .container-button {
   position: absolute;
   text-align: center;
-  top: 87.5vh;
+  top: 7.5vh;
   width: 100vw;
   opacity: 0;
 }

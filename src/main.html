@@ -21,7 +21,6 @@
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 
-
       <!-- App launcher icon -->
       <link rel="apple-touch-icon" href="images/icons/apple-icon.png">
       <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
@@ -48,8 +47,15 @@
       </div>
 
       <div class="body">
-        <p id="cards" class="cards">{{ value }}</p>
-        <img id="ocbc_card" class="image-ocbc-card" src="images/main/ocbc-card.png" />
+        <div id="page_wallet">
+          <p id="cards" class="cards">{{ value }}</p>
+          <img id="ocbc_card" class="image-ocbc-card" src="images/main/ocbc-card.png" />
+        </div>
+
+        <div id="page_camera">
+          <video id="gum-local" class="camera-window" autoplay playsinline></video>
+          <div id="errorMsg"></div>
+        </div>
       </div>
       
       <div class="footer">
@@ -61,6 +67,12 @@
         </div>
 
       </div>
+
+      <!-- WebRTC Library -->
+      <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+      <script src="js/webrtc/main.js"></script>
+      <script src="js/webrtc/common.js"></script>
+      <script src="js/webrtc/ga.js"></script>
 
       <script src="js/main.js"></script>
     </body>
