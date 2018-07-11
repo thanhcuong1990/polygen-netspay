@@ -40,7 +40,8 @@ html, body {
 
 .body .camera-window {
   width: 100vw;
-  height: auto;
+  height: 82.5vh;
+  object-fit: fill;
 }
 
 .footer {
