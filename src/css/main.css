@@ -27,7 +27,7 @@ html, body {
 }
 
 .body .cards {
-  color: blue;
+  color: darkblue;
   margin-left: 4vw;
 }
 
@@ -35,7 +35,15 @@ html, body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 100vw;
+  width: 75vw;
+}
+
+.body .image-nfc {
+  position: absolute;
+  top: 45vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30vw;
 }
 
 .body .camera-window {
