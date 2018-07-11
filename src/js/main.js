@@ -34,6 +34,7 @@ var attachMobileSafariAddressBarHelpTip = function (target) {
       trigger: 'manual',
       placement: 'bottom'
   });
+  
   $(window).on('resize', function () {
       var bodyHeight = document.body.offsetHeight;
       var windowHeight = window.innerHeight;
