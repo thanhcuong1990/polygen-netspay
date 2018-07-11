@@ -35,7 +35,7 @@ html, body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 75vw;
+  width: 80vw;
 }
 
 .body .image-nfc {
@@ -43,7 +43,7 @@ html, body {
   top: 45vh;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 30vw;
+  width: 40vw;
 }
 
 .body .camera-window {
