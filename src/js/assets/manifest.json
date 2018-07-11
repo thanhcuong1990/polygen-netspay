@@ -1,0 +1,8 @@
+{
+    "name": "Polygen",
+    "short_name": "Polygen",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Polygen webapp"
+  }
