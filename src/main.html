@@ -31,7 +31,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+      <script type="text/javascript" src="js/webrtc/instascan.min.js"></script>
       <!-- Stylesheet -->
       <link href="css/main.css" rel="stylesheet" />
       
@@ -73,6 +73,35 @@
       <script src="js/webrtc/ga.js"></script>
 
       <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      let scanner = new Instascan.Scanner(
+        { 
+          continuous: true,
+          video: document.getElementById('gum-local'),
+          mirror: false,
+          captureImage: false,
+          backgroundScan: true,
+          refractoryPeriod: 1000,
+          scanPeriod: 1
+        });
+      scanner.addListener('scan', function (content) {
+        // console.log(content);
+        window.alert(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          // console.error('No cameras found.');
+          window.alert('error');
+        }
+      }).catch(function (e) {
+        // console.error(e);
+        window.alert('error');
+      });
+    </script>
+
     </body>
 
 </html>

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/charlieangriawan/polygen-netspay#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "instascan": "^1.0.0",
     "vue": "^2.5.16"
   }
 }
