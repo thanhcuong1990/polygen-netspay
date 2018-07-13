@@ -86,8 +86,12 @@ $('#display_amount').on('click touchstart', function() {
 });
 
 $('#amount_input').on('keydown', function(event) {
-  var key = event.which-48;
-  window.alert(key);
+  if (event.which ==  13) {
+    $('#ocbc_card').animate({top:'0vh'});
+    $('.background-fade').fadeOut(500);
+    $('.transaction-details').animate({bottom:'-70%'});
+  }
+  // var key = event.which-48;
   setTimeout(() => {
     var number = $(this).val()/100;
     if (Math.log(number)/Math.LN10 >= 3) return;
