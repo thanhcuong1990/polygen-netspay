@@ -57,9 +57,9 @@ let scanner = new Instascan.Scanner(
     scanPeriod: 1
   });
 scanner.addListener('scan', function (content) {
-  window.alert(content);
-  // $('.background-fade').fadeIn();
-  // $('.transaction-details').animate({bottom:'0%'});
+  // window.alert(content);
+  $('.background-fade').fadeIn();
+  $('.transaction-details').animate({bottom:'0%'});
 });
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {
