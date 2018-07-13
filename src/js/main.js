@@ -48,3 +48,32 @@ var ua = window.navigator.userAgent;
 if(ua.indexOf('iPhone') !== -1 && ua.indexOf('Safari') !== -1) {
   attachMobileSafariAddressBarHelpTip('#main-nav');
 }
+
+$('.background-fade').hide();
+// Instascan
+let scanner = new Instascan.Scanner(
+  { 
+    continuous: true,
+    video: document.getElementById('gum-local'),
+    mirror: false,
+    captureImage: false,
+    backgroundScan: true,
+    refractoryPeriod: 1000,
+    scanPeriod: 1
+  });
+scanner.addListener('scan', function (content) {
+  // window.alert(content);
+  $('#page_camera').hide();
+  $('#page_wallet').show();
+  $('.background-fade').fadeIn(500);
+  $('.transaction-details').animate({bottom:'0%'});
+});
+Instascan.Camera.getCameras().then(function (cameras) {
+  if (cameras.length > 0) {
+    scanner.start(cameras[1]);
+  } else {
+    window.alert('No camera found');
+  }
+}).catch(function (e) {
+  window.alert(e);
+});
