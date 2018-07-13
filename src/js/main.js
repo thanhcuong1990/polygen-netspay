@@ -66,9 +66,9 @@ scanner.addListener('scan', function (content) {
   $('#page_camera').hide();
   $('#cards').hide();
   $('#page_wallet').show();
+  $('#page_wallet').animate({marginTop: '10vh'})
   $('.background-fade').fadeIn(500);
   $('.transaction-details').animate({bottom:'0%'});
-  $('.body').animate({top: '10vh'});
   $('#amount_input').focus();
 });
 Instascan.Camera.getCameras().then(function (cameras) {
