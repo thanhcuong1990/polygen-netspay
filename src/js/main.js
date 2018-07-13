@@ -81,8 +81,15 @@ Instascan.Camera.getCameras().then(function (cameras) {
   window.alert(e);
 });
 
+$('#display_amount').on('click touchstart', function() {
+  $('#amount_input').focus();
+});
+
 $('#amount_input').on('keydown', function(event) {
-  event.preventDefault();
-  window.alert(event);
-  var key = event-48;
+  var key = event.which-48;
+  setTimeout(() => {
+    var number = $(this).val()/100;
+    if (Math.log(number)/Math.LN10 >= 3) return;
+    $('#display_amount').text('$' + number);
+  }, 100);
 });
