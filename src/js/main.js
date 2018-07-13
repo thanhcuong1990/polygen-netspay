@@ -81,6 +81,8 @@ Instascan.Camera.getCameras().then(function (cameras) {
   window.alert(e);
 });
 
-$('#amount_input').on('keydown', function() {
-  window.alert("yes");
+$('#amount_input').on('keydown', function(event) {
+  event.preventDefault();
+  window.alert(event);
+  var key = event-48;
 });
