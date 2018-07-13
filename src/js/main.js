@@ -87,9 +87,10 @@ $('#display_amount').on('click touchstart', function() {
 
 $('#amount_input').on('keydown', function(event) {
   var key = event.which-48;
+  window.alert(key);
   setTimeout(() => {
     var number = $(this).val()/100;
     if (Math.log(number)/Math.LN10 >= 3) return;
-    $('#display_amount').text('$' + number);
+    $('#display_amount').text('$' + number.toFixed(2));
   }, 100);
 });
