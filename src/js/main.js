@@ -64,9 +64,12 @@ let scanner = new Instascan.Scanner(
 scanner.addListener('scan', function (content) {
   // window.alert(content);
   $('#page_camera').hide();
+  $('#cards').hide();
   $('#page_wallet').show();
   $('.background-fade').fadeIn(500);
   $('.transaction-details').animate({bottom:'0%'});
+  $('.body').animate({top: '10vh'});
+  $('#amount_input').focus();
 });
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {
