@@ -66,9 +66,9 @@ scanner.addListener('scan', function (content) {
   $('#page_camera').hide();
   $('#cards').hide();
   $('#page_wallet').show();
-  $('#ocbc_card').animate({top:'17.5vh'}, 1000);
+  $('#ocbc_card').animate({top:'17.5vh'}, 100);
   $('.background-fade').fadeIn(1000);
-  $('.transaction-details').animate({bottom:'0%'}, 1000);
+  $('.transaction-details').animate({bottom:'0%'}, 100);
   $('#amount_input').focus();
 });
 Instascan.Camera.getCameras().then(function (cameras) {
@@ -88,10 +88,10 @@ $('#display_amount').on('click touchstart', function() {
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
     document.activeElement.blur();
-    $('#ocbc_card').animate({top:'13vh'}, 1000);
+    $('#ocbc_card').animate({top:'13vh'});
     $('#cards').show();
     $('.background-fade').fadeOut(1000);
-    $('.transaction-details').animate({bottom:'-70%'}, 1000);
+    $('.transaction-details').animate({bottom:'-70%'}, 100);
   }
   // var key = event.which-48;
   setTimeout(() => {
