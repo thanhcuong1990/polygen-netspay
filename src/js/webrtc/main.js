@@ -1,12 +1,4 @@
-/*
- *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree.
- */
 'use strict';
-
 // Put variables in global scope to make them available to the browser console.
 const constraints = window.constraints = {
   audio: false,
@@ -16,7 +8,7 @@ const constraints = window.constraints = {
     } 
   }
 };
-
+// WebRTC
 function handleSuccess(stream) {
   const video = document.querySelector('video');
   const videoTracks = stream.getVideoTracks();
@@ -50,3 +42,36 @@ navigator.mediaDevices
   .getUserMedia(constraints)
   .then(handleSuccess)
   .catch(handleError);
+
+
+
+$('.background-fade').hide();
+// Instascan
+let scanner = new Instascan.Scanner(
+  { 
+    continuous: true,
+    video: document.getElementById('gum-local'),
+    mirror: false,
+    captureImage: false,
+    backgroundScan: true,
+    refractoryPeriod: 1000,
+    scanPeriod: 1
+  });
+scanner.addListener('scan', function (content) {
+  $('.background-fade').fadeIn();
+  $('.transaction-details').animate({marginTop:'0%'});
+});
+Instascan.Camera.getCameras().then(function (cameras) {
+  if (cameras.length > 0) {
+    scanner.start(cameras[1]);
+  } else {
+    window.alert('No camera found');
+  }
+}).catch(function (e) {
+  window.alert(e);
+});
+
+
+function openMerchant() {
+
+}
