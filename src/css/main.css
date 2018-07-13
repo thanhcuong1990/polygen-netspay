@@ -140,7 +140,7 @@ html, body {
   left: 50%;
   transform: translate(-50%, 0%);
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   border-radius: 15px;
   text-align: center;
 }
@@ -158,16 +158,16 @@ html, body {
 }
 
 .text-transaction {
-  margin-top: 85px;
+  margin-top: 65px;
   margin-bottom: 0px;
-  font-size: 40px;
+  font-size: 30px;
   color: cornflowerblue;
 }
 
 .text-amt {
   margin-top: 0px;
-  margin-bottom: 85px;
-  font-size: 20px;
+  margin-bottom: 65px;
+  font-size: 15px;
 }
 
 table {
