@@ -80,3 +80,7 @@ Instascan.Camera.getCameras().then(function (cameras) {
 }).catch(function (e) {
   window.alert(e);
 });
+
+$('#amount_input').on('keydown', function() {
+  window.alert("yes");
+});
