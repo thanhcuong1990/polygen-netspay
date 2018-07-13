@@ -58,6 +58,7 @@ let scanner = new Instascan.Scanner(
   });
 scanner.addListener('scan', function (content) {
   // window.alert(content);
+  $('.camera-window').hide();
   $('.background-fade').fadeIn();
   $('.transaction-details').animate({bottom:'0%'});
 });
