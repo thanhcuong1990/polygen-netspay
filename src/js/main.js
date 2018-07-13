@@ -66,7 +66,7 @@ scanner.addListener('scan', function (content) {
   $('#page_camera').hide();
   $('#cards').hide();
   $('#page_wallet').show();
-  $('#ocbc_card').animate({top:'7.5vh'});
+  $('#ocbc_card').animate({top:'17.5vh'});
   $('.background-fade').fadeIn(500);
   $('.transaction-details').animate({bottom:'0%'});
   $('#amount_input').focus();
