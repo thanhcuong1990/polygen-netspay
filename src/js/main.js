@@ -49,6 +49,7 @@ if(ua.indexOf('iPhone') !== -1 && ua.indexOf('Safari') !== -1) {
   attachMobileSafariAddressBarHelpTip('#main-nav');
 }
 
+$('.animation-loader').hide();
 $('.background-fade').hide();
 // Instascan
 let scanner = new Instascan.Scanner(
@@ -64,12 +65,17 @@ let scanner = new Instascan.Scanner(
 scanner.addListener('scan', function (content) {
   // window.alert(content);
   $('#page_camera').hide();
-  $('#cards').hide();
   $('#page_wallet').show();
-  $('#ocbc_card').animate({top:'17.5vh'}, 100);
-  $('.background-fade').fadeIn(1000);
-  $('.transaction-details').animate({bottom:'0%'}, 100);
-  $('#amount_input').focus();
+  $('.animation-loader').fadeIn(1000);
+
+  setTimeout(() => {
+    $('.animation-loader').fadeOut(800);
+    $('#cards').hide();
+    $('#ocbc_card').animate({top:'17.5vh'}, 100);
+    $('.background-fade').fadeIn(1000);
+    $('.transaction-details').animate({bottom:'0%'}, 100);
+    $('#amount_input').focus();
+  }, 2000);
 });
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {
@@ -93,7 +99,14 @@ $('#amount_input').on('keydown', function(event) {
     $('.background-fade').fadeOut(1000);
     $('.transaction-details').animate({bottom:'-70%'}, 100);
     $('.text-transaction').text('S$' + ($(this).val()/100).toFixed(2));
-    $("#myModal").modal();
+    $('.animation-loader').fadeIn(1000);
+
+    setTimeout(() => {
+      $('.animation-loader').fadeOut(800);
+      $("#myModal").modal();
+    }, 3000);
+
+
   }
   // var key = event.which-48;
   setTimeout(() => {

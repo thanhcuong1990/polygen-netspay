@@ -205,3 +205,10 @@ td {
   width: 90%;
   color: cornflowerblue;
 }
+
+.animation-loader {
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
