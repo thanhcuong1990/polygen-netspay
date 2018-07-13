@@ -17,6 +17,7 @@
       <!-- Home Screen setting -->
       <meta name="viewport" content = "width=device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
       <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
       <!-- apple-mobile-web-app-capable doesn't allow camera access on IOS 11 -->
       <meta id="theme-color" name="theme-color" content="#ffffff">
       <meta itemprop="image" content="images/icons/apple-icon-192x192.png">
@@ -48,6 +49,15 @@
           <p id="cards" class="cards">{{ value }}</p>
           <img id="ocbc_card" class="image-ocbc-card" src="images/main/ocbc-card.png" />
           <img id="nfc_icon" class="image-nfc" src="images/main/nfc-icon.png" />
+          
+          <div class="background-fade"></div>
+          <div class="transaction-details">
+            <img class="image-merchant" src="images/main/merchant.png" />
+            <p>YONG YUAN VEGETARIAN</p>
+            <p>MERCHANT NAME</p>
+            <p>ENTER AMOUNT</p>
+            <input type="number" />
+          </div>
         </div>
 
         <div id="page_camera">
@@ -63,7 +73,6 @@
           <button id="button_wallet" class="button-invisible"></button>
           <button id="button_settings" class="button-invisible"></button>
         </div>
-
       </div>
 
       <!-- WebRTC Library -->
