@@ -92,11 +92,13 @@ $('#amount_input').on('keydown', function(event) {
     $('#cards').show();
     $('.background-fade').fadeOut(1000);
     $('.transaction-details').animate({bottom:'-70%'}, 100);
+    $('.text-transaction').text('S$' + ($(this).val()/100).toFixed(2));
+    $("#myModal").modal();
   }
   // var key = event.which-48;
   setTimeout(() => {
     var number = $(this).val()/100;
     if (Math.log(number)/Math.LN10 >= 3) return;
     $('#display_amount').text('$' + number.toFixed(2));
-  }, 100);
+  }, 10);
 });

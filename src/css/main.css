@@ -133,3 +133,75 @@ html, body {
   font-weight: 700;
   z-index: 500;
 }
+
+.modal-content {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 90vw;
+  height: 90vh;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.image-approved {
+  position: relative;
+  top: 10%;
+  width: 20vw;
+}
+
+.text-approved {
+  color: limegreen;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.text-transaction {
+  margin-top: 85px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  color: cornflowerblue;
+}
+
+.text-amt {
+  margin-top: 0px;
+  margin-bottom: 85px;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border: none;
+}
+
+td {
+  font-size: 18px;
+  padding: 3px;
+}
+
+.table-left {
+  text-align: left;
+}
+
+.table-right { 
+  text-align: right;
+}
+
+.orange-line {
+  background: orange;
+  border-radius: 2px;
+  width: 100%;
+  height: 10px;  
+}
+
+.btn-close {
+  position: fixed;
+  font-size: 20px;
+  font-weight: 500;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+  color: cornflowerblue;
+}
