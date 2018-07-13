@@ -64,16 +64,19 @@
           <video id="gum-local" class="camera-window" autoplay playsinline></video>
           <div id="errorMsg"></div>
         </div>
-      </div>
-      
-      <div class="footer">
-        <img class="image-footer-bar" src="images/main/footer-bar.png" />
+
         <div class="container-button">
           <button id="button_scan" class="button-invisible"></button>
           <button id="button_wallet" class="button-invisible"></button>
           <button id="button_settings" class="button-invisible"></button>
         </div>
       </div>
+      
+      <div class="footer">
+        <img class="image-footer-bar" src="images/main/footer-bar.png" />
+      </div>
+
+
 
       <!-- WebRTC Library -->
       <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
@@ -84,31 +87,30 @@
       <script src="js/main.js"></script>
 
     <script type="text/javascript">
-      let scanner = new Instascan.Scanner(
-        { 
-          continuous: true,
-          video: document.getElementById('gum-local'),
-          mirror: false,
-          captureImage: false,
-          backgroundScan: true,
-          refractoryPeriod: 1000,
-          scanPeriod: 1
-        });
-      scanner.addListener('scan', function (content) {
-        // console.log(content);
-        window.alert(content);
-      });
-      Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-          scanner.start(cameras[1]);
-        } else {
-          // console.error('No cameras found.');
-          window.alert('error');
-        }
-      }).catch(function (e) {
-        // console.error(e);
-        window.alert('error');
-      });
+ let scanner = new Instascan.Scanner(
+  { 
+    continuous: true,
+    video: document.getElementById('gum-local'),
+    mirror: false,
+    captureImage: false,
+    backgroundScan: true,
+    refractoryPeriod: 1000,
+    scanPeriod: 1
+  });
+scanner.addListener('scan', function (content) {
+  window.alert(content);
+  // $('.background-fade').fadeIn();
+  // $('.transaction-details').animate({bottom:'0%'});
+});
+Instascan.Camera.getCameras().then(function (cameras) {
+  if (cameras.length > 0) {
+    scanner.start(cameras[1]);
+  } else {
+    window.alert('No camera found');
+  }
+}).catch(function (e) {
+  window.alert(e);
+});
     </script>
 
     </body>

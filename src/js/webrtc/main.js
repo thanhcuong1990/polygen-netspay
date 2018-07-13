@@ -44,34 +44,8 @@ navigator.mediaDevices
   .catch(handleError);
 
 
-
 $('.background-fade').hide();
 // Instascan
-let scanner = new Instascan.Scanner(
-  { 
-    continuous: true,
-    video: document.getElementById('gum-local'),
-    mirror: false,
-    captureImage: false,
-    backgroundScan: true,
-    refractoryPeriod: 1000,
-    scanPeriod: 1
-  });
-scanner.addListener('scan', function (content) {
-  $('.background-fade').fadeIn();
-  $('.transaction-details').animate({marginTop:'0%'});
-});
-Instascan.Camera.getCameras().then(function (cameras) {
-  if (cameras.length > 0) {
-    scanner.start(cameras[1]);
-  } else {
-    window.alert('No camera found');
-  }
-}).catch(function (e) {
-  window.alert(e);
-});
 
 
-function openMerchant() {
 
-}

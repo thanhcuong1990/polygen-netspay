@@ -62,15 +62,16 @@ html, body {
   width: 100%;
 }
 
-.footer .container-button {
+.container-button {
   position: absolute;
   text-align: center;
-  top: 7.5vh;
+  top: 85vh;
   width: 100vw;
   opacity: 0;
+  z-index: 50;
 }
 
-.footer .container-button .button-invisible {
+.container-button .button-invisible {
   width: 30vw;
   height: 12vh;
 }
@@ -88,11 +89,10 @@ html, body {
   position: absolute;
   background-color: #fff;
   text-align: center;
-  bottom: 0%;
+  bottom: -70%;
   width: 100%;
   height: 70%;
   z-index: 10;
-  margin-top: 80%;
 }
 
 .image-merchant {
