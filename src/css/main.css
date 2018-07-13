@@ -79,7 +79,6 @@ html, body {
   position: absolute;
   height: 100%;
   width: 100%;
-  margin-top: -5vh;
   background-color: #333;
   opacity: 0.5;
   z-index: 5;
@@ -99,7 +98,7 @@ html, body {
   margin-top: 2.5%;
   width: 20vw;
 }
-
+/* lower+ disbaledefault */
 .text-merchant {
 }
 
