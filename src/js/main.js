@@ -105,8 +105,7 @@ $('#amount_input').on('keydown', function(event) {
       $('.animation-loader').fadeOut(800);
       $("#myModal").modal();
     }, 3000);
-
-
+    return;
   }
   // var key = event.which-48;
   setTimeout(() => {
