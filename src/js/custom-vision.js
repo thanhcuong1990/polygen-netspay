@@ -73,7 +73,7 @@ setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 100);
+}, 1000);
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;
