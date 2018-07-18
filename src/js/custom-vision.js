@@ -1,5 +1,3 @@
-window.alert(window.location.hostname);
-
 var currentImage;
 
 var videoId = 'gum-local';
@@ -33,17 +31,8 @@ function shoot() {
     window.open(this.toDataURL(image/jpg));
   };
   snapshots.unshift(canvas);
-  // output.innerHTML = '';
-  // output.appendChild(snapshots[0]);
   currentImage = snapshots[0].toDataURL();
-  // currentImage = snapshots[0].toDataURL("image/png");
   console.log('imagecaptured');
-//   console.log(currentImage.substring(22, currentImage.length));
-//   console.log(currentImage);
-//   var testGlobal = snapshots[0];
-//   snapshots[0].setAttribute("crossOrigin", "Anonymous");
-//   console.log(snapshots[0]);
-  // console.log(snapshots[0].toDataURL());
 }
 
 function processImage() {
@@ -69,21 +58,22 @@ $.ajax({
     },
     type: "POST",
     // Request body
-    data: `{'url': 'https://${window.location.hostname}/image.png'}`,
+    data: `{'url': 'https://${window.location.hostname}/customvision.png'}`,
   })
   .done(function(data) {
-    window.alert(JSON.stringify(data, null, 2));
+    // window.alert(JSON.stringify(data, null, 2));
+    window.alert('success');
   })
   .fail(function(error) {
     window.alert("error: " + JSON.stringify(error, null, 2));
   });
 }
     
-setTimeout(() => {
+setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 5000);
+}, 100);
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;

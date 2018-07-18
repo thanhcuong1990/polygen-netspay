@@ -22,10 +22,6 @@ app.get('/experiment', function (req, res) {
 });
 
 app.get('/customvision', function (req, res) {
-    res.sendFile(__dirname + '/src/cv.html');
-});
-
-app.get('/image.png', function (req, res) {
     res.sendFile(__dirname + '/src/images/custom-vision/temp.png');
 });
 
