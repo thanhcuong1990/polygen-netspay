@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "instascan": "^1.0.0",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "websocket": "^1.0.25"
   }
 }
