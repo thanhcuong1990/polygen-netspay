@@ -37,12 +37,12 @@ function shoot() {
 
 function processImage() {
 // console.log(testGlobal.toDataURL());
-var projectID = 'e6e7dba9-c7dc-4e51-a327-5cadf8467e68';
-var subsribtionKey = '7a6d86ae0aec48ffbe5d83f4f904b028';
+var projectID = 'a74fe4d9-f80f-454a-8811-66ba82866811';
+var subsribtionKey = '67b6cb9ea6724889a299016804a25630';
 
 // Request parameters
 var params = {
-    "iterationId": "no-iteraction",
+    "iterationId": "28bf1333-4d29-42fa-8eb8-c6c316b46981",
     "application": "polygen",
   };
 
@@ -58,7 +58,7 @@ $.ajax({
     },
     type: "POST",
     // Request body
-    data: `{'url': 'https://${window.location.hostname}/customvision.png'}`,
+    data: `{'url': 'https://${window.location.hostname}/customvision'}`,
   })
   .done(function(data) {
     // window.alert(JSON.stringify(data, null, 2));
@@ -69,11 +69,17 @@ $.ajax({
   });
 }
     
-setInterval(()=> {
+// setInterval(()=> {
+//   shoot();
+//   connection.send(JSON.stringify({imageData : currentImage}));
+//   processImage();
+// }, 2000);
+
+setTimeout(() => {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 1000);
+}, 3000);
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;
