@@ -69,17 +69,17 @@ $.ajax({
   });
 }
     
-// setInterval(()=> {
-//   shoot();
-//   connection.send(JSON.stringify({imageData : currentImage}));
-//   processImage();
-// }, 2000);
-
-setTimeout(() => {
+setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 3000);
+}, 200);
+
+// setTimeout(() => {
+//   shoot();
+//   connection.send(JSON.stringify({imageData : currentImage}));
+//   processImage();
+// }, 3000);
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;
