@@ -95,6 +95,7 @@ connection.onopen = function () {
 };
 connection.onerror = function (error) {
   // an error occurred when sending/receiving data
+  console.log(error);
 };
 connection.onmessage = function (message) {
   // handle incoming message

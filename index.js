@@ -45,7 +45,6 @@ var wsServer = new WebSocketServer({
 var ws;
 wsServer.on('request', function (request) {
     ws = request.accept(null, request.origin);
-    var isFirstTime = true;
     console.log('Websocket established on port %d', server.address().port);
     // This is the most important callback for us, we'll handle
     // all messages from users here.
