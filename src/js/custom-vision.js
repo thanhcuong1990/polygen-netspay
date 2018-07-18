@@ -69,7 +69,7 @@ $.ajax({
     },
     type: "POST",
     // Request body
-    data: `{'url': '${window.location.hostname + "/image.png"}'}`,
+    data: `{'url': 'https://${window.location.hostname}/image.png'}`,
   })
   .done(function(data) {
     window.alert(JSON.stringify(data, null, 2));
@@ -87,7 +87,7 @@ setTimeout(() => {
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;
-var connection = new WebSocket('ws://' + location.host);
+var connection = new WebSocket('wss://' + location.host);
 console.log('websocket is initiated in ' + JSON.stringify(connection));
 connection.onopen = function () {
   // connection is opened and ready to use
