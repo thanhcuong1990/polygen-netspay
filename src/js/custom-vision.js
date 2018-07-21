@@ -65,7 +65,7 @@ $.ajax({
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
     // console.log(result_probability);
-    if (result_probability > 0.9999) {
+    if (result_probability = 1) {
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);
