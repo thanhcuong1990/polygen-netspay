@@ -65,7 +65,7 @@ $.ajax({
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
     // console.log(result_probability);
-    if (result_probability > 0.99) {
+    if (result_probability > 0.9999) {
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);
@@ -91,7 +91,7 @@ setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 2000);
+}, 200);
 
 // setTimeout(() => {
 //   shoot();
