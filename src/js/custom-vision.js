@@ -32,7 +32,7 @@ function shoot() {
   };
   snapshots.unshift(canvas);
   currentImage = snapshots[0].toDataURL();
-  console.log('imagecaptured');
+  // console.log('imagecaptured');
 }
 
 function processImage() {
@@ -42,7 +42,7 @@ var subsribtionKey = '67b6cb9ea6724889a299016804a25630';
 
 // Request parameters
 var params = {
-    "iterationId": "c2c57f64-6adc-4fdb-b051-0c5ef5e29517",
+    "iterationId": "a67a21f9-2eba-42ff-8c03-21d6957e7450",
     "application": "polygen",
   };
 
@@ -65,7 +65,7 @@ $.ajax({
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
     console.log(result_probability + ' ' + result_tag);
-    if (result_probability > 0.99999) {
+    if (result_tag == 'hawker_center' && result_probability > 0.70) {
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);
