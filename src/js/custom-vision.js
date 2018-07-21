@@ -61,9 +61,9 @@ $.ajax({
     data: `{'url': 'https://${window.location.hostname}/customvision'}`,
   })
   .done(function(data) {
-    var json_result = data.Predictions;
-    console.log(json_result)
-    console.log(JSON.stringify(data, null, 2));
+    // var json_result = data.Predictions;
+    console.log(json_result[0].Tag + json_result[0].Probability)
+    // console.log(JSON.stringify(data, null, 2));
     // window.alert('success');
   })
   .fail(function(error) {
