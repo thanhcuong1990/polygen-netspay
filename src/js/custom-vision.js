@@ -64,9 +64,20 @@ $.ajax({
     var json_result = data.Predictions;
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
-    console.log(result_probability);
+    // console.log(result_probability);
     if (result_probability > 0.99) {
-      window.alert('detected');
+      $('#page_camera').hide();
+      $('#page_wallet').show();
+      $('.animation-loader').fadeIn(1000);
+    
+      setTimeout(() => {
+        $('.animation-loader').fadeOut(800);
+        $('#cards').hide();
+        $('#ocbc_card').animate({top:'17.5vh'}, 100);
+        $('.background-fade').fadeIn(1000);
+        $('.transaction-details').animate({bottom:'0%'}, 100);
+        $('#amount_input').focus();
+      }, 2000);
     }
     // console.log(JSON.stringify(data, null, 2));
     // window.alert('success');
