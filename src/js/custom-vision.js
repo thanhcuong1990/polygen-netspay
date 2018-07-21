@@ -65,7 +65,7 @@ $.ajax({
     var result_probability = json_result[0].Probability
     
     console.log(result_probability + ' ' + result_tag);
-    if (result_tag != 'noise' && result_probability > 0.80) {
+    if (result_tag != 'noise' && result_probability > 0.99) {
       if (result_tag == 'menu_yunyue_soyamilk') {
         $('#display_amount').text('$1.00');
         $('#amount_input').val(100);
