@@ -1,5 +1,4 @@
 var currentImage;
-
 var videoId = 'gum-local';
 var scaleFactor = 0.25;
 var snapshots = [];
@@ -66,6 +65,9 @@ $.ajax({
     var result_probability = json_result[0].Probability
     console.log(result_probability + ' ' + result_tag);
     if (result_tag != 'noise' && result_probability > 0.70) {
+      $('#display_amount').text('$1.20');
+      $('#amount_input').val(120);
+
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);

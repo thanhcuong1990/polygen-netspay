@@ -18,6 +18,9 @@ scanner.addListener('scan', function (content) {
   $('.animation-loader').fadeIn(1000);
 
   setTimeout(() => {
+    $('#display_amount').text('$3.50');
+    $('#amount_input').val(350);
+
     $('.animation-loader').fadeOut(800);
     $('#cards').hide();
     $('#ocbc_card').animate({top:'17.5vh'}, 100);
