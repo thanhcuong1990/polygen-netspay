@@ -67,6 +67,7 @@ $.ajax({
     if (result_tag != 'noise' && result_probability > 0.70) {
       $('#display_amount').text('$1.20');
       $('#amount_input').val(120);
+      $('#discount_field').text('');
 
       $('#page_camera').hide();
       $('#page_wallet').show();
