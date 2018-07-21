@@ -64,7 +64,7 @@ $.ajax({
     var json_result = data.Predictions;
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
-
+    console.log(result_probability);
     if (result_probability > 95) {
       window.alert('detected');
     }
