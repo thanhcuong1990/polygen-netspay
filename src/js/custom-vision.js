@@ -64,7 +64,7 @@ $.ajax({
     var json_result = data.Predictions;
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
-    console.log(result_probability);
+    console.log(result_probability + ' ' + result_tag);
     if (result_probability > 0.99999) {
       $('#page_camera').hide();
       $('#page_wallet').show();
@@ -86,8 +86,6 @@ $.ajax({
     console.log("error: " + JSON.stringify(error, null, 2));
   });
 }
-    
-
 
 setTimeout(() => {
   setInterval(()=> {
