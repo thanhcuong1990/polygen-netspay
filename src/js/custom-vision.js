@@ -62,8 +62,8 @@ $.ajax({
   })
   .done(function(data) {
     var json_result = data.Predictions;
-    window.alert(json_result)
-    // window.alert(JSON.stringify(data, null, 2));
+    console.log(json_result)
+    console.log(JSON.stringify(data, null, 2));
     // window.alert('success');
   })
   .fail(function(error) {
