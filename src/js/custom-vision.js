@@ -62,7 +62,12 @@ $.ajax({
   })
   .done(function(data) {
     var json_result = data.Predictions;
-    console.log(json_result[0].Tag + json_result[0].Probability)
+    var result_tag = json_result[0].Tag;
+    var result_probability = json_result[0].Probability
+
+    if (result_probability > 95) {
+      window.alert('detected');
+    }
     // console.log(JSON.stringify(data, null, 2));
     // window.alert('success');
   })
