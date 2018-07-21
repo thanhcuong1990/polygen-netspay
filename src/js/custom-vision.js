@@ -42,7 +42,7 @@ var subsribtionKey = '67b6cb9ea6724889a299016804a25630';
 
 // Request parameters
 var params = {
-    "iterationId": "28bf1333-4d29-42fa-8eb8-c6c316b46981",
+    "iterationId": "76f61d5f-a5e7-4e89-a08e-d17fd8abff5e",
     "application": "polygen",
   };
 
@@ -61,7 +61,9 @@ $.ajax({
     data: `{'url': 'https://${window.location.hostname}/customvision'}`,
   })
   .done(function(data) {
-    window.alert(JSON.stringify(data, null, 2));
+    var json_result = data.Predictions;
+    window.alert(json_result)
+    // window.alert(JSON.stringify(data, null, 2));
     // window.alert('success');
   })
   .fail(function(error) {
