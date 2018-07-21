@@ -65,7 +65,7 @@ $.ajax({
     var result_tag = json_result[0].Tag;
     var result_probability = json_result[0].Probability
     console.log(result_probability + ' ' + result_tag);
-    if (result_tag != 'noise' && result_probability > 0.90) {
+    if (result_tag != 'noise' && result_probability > 0.70) {
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);
