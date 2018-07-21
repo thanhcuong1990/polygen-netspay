@@ -61,8 +61,8 @@ $.ajax({
     data: `{'url': 'https://${window.location.hostname}/customvision'}`,
   })
   .done(function(data) {
-    // window.alert(JSON.stringify(data, null, 2));
-    window.alert('success');
+    window.alert(JSON.stringify(data, null, 2));
+    // window.alert('success');
   })
   .fail(function(error) {
     window.alert("error: " + JSON.stringify(error, null, 2));
@@ -73,7 +73,7 @@ setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 200);
+}, 2000);
 
 // setTimeout(() => {
 //   shoot();
