@@ -83,7 +83,7 @@ $.ajax({
     // window.alert('success');
   })
   .fail(function(error) {
-    window.alert("error: " + JSON.stringify(error, null, 2));
+    console.log("error: " + JSON.stringify(error, null, 2));
   });
 }
     
