@@ -63,7 +63,7 @@ $('#amount_input').on('keydown', function(event) {
     $('.transaction-details').animate({bottom:'-70%'}, 100);
     var transaction_amount = $(this).val();
     if (transaction_amount >= 300) transaction_amount -= 50;
-    $('.text-transaction').text('S$' + ($(this).val()/100).toFixed(2));
+    $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
     $('.animation-loader').fadeIn(1000);
 
     setTimeout(() => {
