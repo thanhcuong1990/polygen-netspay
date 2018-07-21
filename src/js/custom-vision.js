@@ -91,7 +91,7 @@ setInterval(()=> {
   shoot();
   connection.send(JSON.stringify({imageData : currentImage}));
   processImage();
-}, 200);
+}, 300);
 
 // setTimeout(() => {
 //   shoot();
