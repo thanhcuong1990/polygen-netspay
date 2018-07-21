@@ -94,8 +94,8 @@ setTimeout(() => {
     shoot();
     connection.send(JSON.stringify({imageData : currentImage}));
     processImage();
-  }, 300);
-}, 2000);
+  }, 200);
+}, 1000);
 
 // if user is running mozilla then use it's built-in WebSocket
 window.WebSocket = window.WebSocket || window.MozWebSocket;
