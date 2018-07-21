@@ -56,7 +56,8 @@ $('#display_amount').on('click touchstart', function() {
 
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
-    document.activeElement.blur();
+    $(this).blur();
+    // document.activeElement.blur();
     $('#ocbc_card').animate({top:'13vh'});
     $('#cards').show();
     $('.background-fade').fadeOut(1000);
