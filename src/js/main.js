@@ -56,9 +56,6 @@ $('#display_amount').on('click touchstart', function() {
 
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
-    $(this).blur();
-    document.activeElement.blur();
-
     $('#ocbc_card').animate({top:'13vh'});
     $('#cards').show();
     $('.background-fade').fadeOut(1000);
@@ -67,14 +64,12 @@ $('#amount_input').on('keydown', function(event) {
     if (transaction_amount >= 300) transaction_amount -= 50;
     $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
     $('.animation-loader').fadeIn(1000);
-
     $(this).blur();
-    document.activeElement.blur();
-
+    
     setTimeout(() => {
       $('.animation-loader').fadeOut(800);
       $("#myModal").modal();
-      $(this).blur();
+
       document.activeElement.blur();
     }, 3000);
     return;
