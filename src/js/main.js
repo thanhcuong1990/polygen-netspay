@@ -16,17 +16,6 @@ $(document).ready(function() {
   }
 });
 
-$('#page_camera').hide();
-$('#button_scan').bind('click touchstart', function() {
-    $('#page_camera').show();
-    $('#page_wallet').hide();
-});
-
-$('#button_wallet').bind('click touchstart', function() {
-  $('#page_camera').hide();
-  $('#page_wallet').show();
-});
-
 var attachMobileSafariAddressBarHelpTip = function (target) {
   var $target = $(target);
   $target.tooltip({
@@ -44,7 +33,57 @@ var attachMobileSafariAddressBarHelpTip = function (target) {
       $target.tooltip(showTooltip ? 'show' : 'hide');
   });
 }
+
 var ua = window.navigator.userAgent;
 if(ua.indexOf('iPhone') !== -1 && ua.indexOf('Safari') !== -1) {
   attachMobileSafariAddressBarHelpTip('#main-nav');
 }
+
+$('#page_camera').hide();
+$('#button_scan').bind('click touchstart', function() {
+    $('#page_camera').show();
+    $('#page_wallet').hide();
+});
+
+$('#button_wallet').bind('click touchstart', function() {
+  $('#page_camera').hide();
+  $('#page_wallet').show();
+});
+
+$('#display_amount').on('click touchstart', function() {
+  $('#amount_input').focus();
+});
+
+$('#amount_input').on('keydown', function(event) {
+  if (event.which ==  13) {
+    document.activeElement.blur();
+    $('#ocbc_card').animate({top:'13vh'});
+    $('#cards').show();
+    $('.background-fade').fadeOut(1000);
+    $('.transaction-details').animate({bottom:'-70%'}, 100);
+    $('.text-transaction').text('S$' + (($(this).val()-50)/100).toFixed(2));
+    $('.animation-loader').fadeIn(1000);
+
+    setTimeout(() => {
+      $('.animation-loader').fadeOut(800);
+      $("#myModal").modal();
+    }, 3000);
+    return;
+  }
+  // var key = event.which-48;
+  setTimeout(() => {
+    //take user input and convert it into 2 decimal points currency
+    var userInput = $(this).val();
+    //limit to DECIMAL(5, 2);
+    if (Math.log(userInput/100)/Math.LN10 >= 3) {
+      $(this).val(userInput/10);
+      return;
+    }  
+    //display discount if there is discount
+    if (userInput >= 300) var discount = $(this).val() - 50;
+    if (discount == null) $('#discount_field').text('');
+    else $('#discount_field').text(`Discount $0.50: $${(discount/100).toFixed(2)}`);
+    //keep the userinput in 2 decimal points
+    $('#display_amount').text('$' + (userInput/100).toFixed(2));
+  }, 10);
+});

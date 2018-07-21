@@ -212,3 +212,11 @@ td {
   left: 50%;
   transform: translate(-50%, 0%);
 }
+
+.discount-field {
+  position: absolute;
+  color: crimson;
+  margin-top: 45px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}

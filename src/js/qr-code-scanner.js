@@ -35,31 +35,3 @@ Instascan.Camera.getCameras().then(function (cameras) {
 }).catch(function (e) {
   window.alert(e);
 });
-
-$('#display_amount').on('click touchstart', function() {
-  $('#amount_input').focus();
-});
-
-$('#amount_input').on('keydown', function(event) {
-  if (event.which ==  13) {
-    document.activeElement.blur();
-    $('#ocbc_card').animate({top:'13vh'});
-    $('#cards').show();
-    $('.background-fade').fadeOut(1000);
-    $('.transaction-details').animate({bottom:'-70%'}, 100);
-    $('.text-transaction').text('S$' + ($(this).val()/100).toFixed(2));
-    $('.animation-loader').fadeIn(1000);
-
-    setTimeout(() => {
-      $('.animation-loader').fadeOut(800);
-      $("#myModal").modal();
-    }, 3000);
-    return;
-  }
-  // var key = event.which-48;
-  setTimeout(() => {
-    var number = $(this).val()/100;
-    if (Math.log(number)/Math.LN10 >= 3) return;
-    $('#display_amount').text('$' + number.toFixed(2));
-  }, 10);
-});
