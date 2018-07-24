@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/experiment', function (req, res) {
-    res.sendFile(__dirname + '/src/camera.html');
+    res.sendFile(__dirname + '/src/nets.html');
 });
 
 app.get('/customvision', function (req, res) {
