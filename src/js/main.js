@@ -55,7 +55,6 @@ $('#display_amount').on('click touchstart', function() {
 });
 
 $('#amount_input').on('keydown', function(event) {
-  window.alert(event.which);
   if (event.which ==  13) {
     $('#ocbc_card').animate({top:'13vh'});
     $('#cards').show();
@@ -92,3 +91,7 @@ $('#amount_input').on('keydown', function(event) {
     $('#display_amount').text('$' + (userInput/100).toFixed(2));
   }, 10);
 });
+
+window.addEventListener("hashchange", function(e) {
+  window.alert('can do');
+})
