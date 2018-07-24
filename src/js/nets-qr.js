@@ -23,7 +23,6 @@ var secret_key = '38a4b473-0295-439d-92e1-ad26a8c60279';
 //NETS API web portal
 // var secret_key = "f49015ce-84fd-4e9a-a24e-8aeb30d870d6"
 
-
 var txnReq = {
     "ss": "1",
     "msg": {
