@@ -50,8 +50,15 @@ $('#button_wallet').bind('click touchstart', function() {
   $('#page_wallet').show();
 });
 
-$('#display_amount').on('click touchstart', function() {
-  $('#amount_input').focus();
+$('#button_wallet').bind('click touchstart', function() {
+  $('#page_camera').hide();
+  $('#page_wallet').show();
+});
+
+$('#button_settings').on('click touchstart', function() {
+  var QRdata = 'NETSqpay0050123456789311220880011111350361000106tester02083503610303080000120007083503610314480280D8DF7A3C87D35C6A8C8EECDDB9E96661707DA425DC2C179606419357';
+  var app2app = `netspay://payment/QRCode?qrdata=${QRdata}&source={bundle_id}&urlscheme={merchant_url_scheme}`;
+  location.href = app2app;
 });
 
 $('#amount_input').on('keydown', function(event) {

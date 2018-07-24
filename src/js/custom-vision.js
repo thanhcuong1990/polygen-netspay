@@ -74,7 +74,6 @@ $.ajax({
         $('#amount_input').val(150);
       }
       $('#discount_field').text('');
-
       $('#page_camera').hide();
       $('#page_wallet').show();
       $('.animation-loader').fadeIn(1000);
