@@ -55,6 +55,7 @@ $('#display_amount').on('click touchstart', function() {
 });
 
 $('#amount_input').on('keydown', function(event) {
+  window.alert(event.which);
   if (event.which ==  13) {
     $('#ocbc_card').animate({top:'13vh'});
     $('#cards').show();
