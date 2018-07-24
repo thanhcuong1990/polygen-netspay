@@ -56,14 +56,14 @@ $('#display_amount').on('click touchstart', function() {
 
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
-    $('#ocbc_card').animate({top:'13vh'});
-    $('#cards').show();
-    $('.background-fade').fadeOut(1000);
-    $('.transaction-details').animate({bottom:'-70%'}, 100);
-    var transaction_amount = $(this).val();
-    if (transaction_amount >= 300) transaction_amount -= 50;
-    $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
-    $('.animation-loader').fadeIn(1000);
+    // $('#ocbc_card').animate({top:'13vh'});
+    // $('#cards').show();
+    // $('.background-fade').fadeOut(1000);
+    // $('.transaction-details').animate({bottom:'-70%'}, 100);
+    // var transaction_amount = $(this).val();
+    // if (transaction_amount >= 300) transaction_amount -= 50;
+    // $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
+    // $('.animation-loader').fadeIn(1000);
     $(this).blur();
     
     setTimeout(() => {
@@ -92,10 +92,13 @@ $('#amount_input').on('keydown', function(event) {
   }, 10);
 });
 
-$(window).backbutton(function(ev){
-  window.alert('yes');
-  if (ev.which === 8) {
-      goBack();
-      ev.preventDefault();
-  }
-});    
+$('#amount_input').focusout(function(){
+    $('#ocbc_card').animate({top:'13vh'});
+    $('#cards').show();
+    $('.background-fade').fadeOut(1000);
+    $('.transaction-details').animate({bottom:'-70%'}, 100);
+    var transaction_amount = $(this).val();
+    if (transaction_amount >= 300) transaction_amount -= 50;
+    $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
+    $('.animation-loader').fadeIn(1000);
+});
