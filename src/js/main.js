@@ -92,6 +92,17 @@ $('#amount_input').on('keydown', function(event) {
   }, 10);
 });
 
-window.addEventListener("hashchange", function(e) {
-  window.alert('can do');
-})
+function onLoad() {
+  document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+function onDeviceReady() {
+  // Register the event listener
+  document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+  // Do stuff here
+  window.alert('yes');
+}
+
