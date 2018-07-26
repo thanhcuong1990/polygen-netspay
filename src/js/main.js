@@ -89,7 +89,7 @@ $('#amount_input').on('keydown', function(event) {
   setTimeout(() => {
     //take user input and convert it into 2 decimal points currency
     var userInput = $(this).val();
-    if(Math.log(userInput)/Math.LN10 > 2) {
+    if(Math.log(userInput)/Math.LN10 > 2 && Math.log(userInput)/Math.LN10 < 3) {
       default_amount = parseInt($(this).val());
     }
     //limit to DECIMAL(5, 2);
