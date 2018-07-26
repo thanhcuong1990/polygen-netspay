@@ -69,9 +69,11 @@ $.ajax({
       if (result_tag == 'menu_yunyue_soyamilk') {
         $('#display_amount').text('$1.00');
         $('#amount_input').val(100);
+        default_amount = 100;
       } else {
         $('#display_amount').text('$1.50');
         $('#amount_input').val(150);
+        default_amount = 150;
       }
       $('#discount_field').text('');
       $('#page_camera').hide();

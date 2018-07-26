@@ -20,6 +20,7 @@ scanner.addListener('scan', function (content) {
   setTimeout(() => {
     $('#display_amount').text('$1.50');
     $('#amount_input').val(150);
+    default_amount = 150;
     $('#discount_field').text('');
 
     $('.animation-loader').fadeOut(800);

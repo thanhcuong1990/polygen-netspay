@@ -1,3 +1,5 @@
+var default_amount = 150;
+
 var cards = new Vue({
   el: '#cards',
   data: {
@@ -57,6 +59,16 @@ $('#button_settings').bind('click touchstart', function() {
   location.href = app2app;
 });
 
+$('#button_double_transaction').bind('click touchstart', function() {
+  event.preventDefault();
+  var added = parseInt($('#amount_input').val()) + default_amount;
+  $('#display_amount').text('S$' + (added/100).toFixed(2));
+  $('#amount_input').val(added);
+  if (added >= 300) var discount = added - 50;
+  if (discount == null) $('#discount_field').text('');
+  else $('#discount_field').html(`<b>Discount:<strike> $${(added/100).toFixed(2)} </strike> $${(discount/100).toFixed(2)}</b>`);
+});
+
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
     var transaction_amount = $(this).val();
@@ -77,6 +89,9 @@ $('#amount_input').on('keydown', function(event) {
   setTimeout(() => {
     //take user input and convert it into 2 decimal points currency
     var userInput = $(this).val();
+    if(Math.log(userInput)/Math.LN10 > 2) {
+      default_amount = parseInt($(this).val());
+    }
     //limit to DECIMAL(5, 2);
     if (Math.log(userInput/100)/Math.LN10 >= 3) {
       $(this).val(userInput/10);
@@ -85,7 +100,8 @@ $('#amount_input').on('keydown', function(event) {
     //display discount if there is discount
     if (userInput >= 300) var discount = $(this).val() - 50;
     if (discount == null) $('#discount_field').text('');
-    else $('#discount_field').text(`Discount $0.50: $${(discount/100).toFixed(2)}`);
+    else $('#discount_field').html(`<b>Discount:<strike> $${(userInput/100).toFixed(2)} </strike> $${(discount/100).toFixed(2)}</b>`);
+    // else $('#discount_field').text(`Discount $0.50: $${(discount/100).toFixed(2)}`);
     //keep the userinput in 2 decimal points
     $('#display_amount').text('$' + (userInput/100).toFixed(2));
   }, 10);
