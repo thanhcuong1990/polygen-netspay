@@ -95,6 +95,10 @@ $('#amount_input').on('keydown', function(event) {
     $('.animation-loader').fadeIn(300);
     $(this).blur();
     
+    $('#button_prediction1').show();
+    $('#button_prediction2').show();
+    $('#button_prediction3').show();
+
     setTimeout(() => {
       $('.animation-loader').fadeOut(300);
       $("#myModal").modal();
