@@ -159,7 +159,7 @@ html, body {
 }
 
 .text-transaction {
-  margin-top: 65px;
+  margin-top: 95px;
   margin-bottom: 0px;
   font-size: 30px;
   color: cornflowerblue;
@@ -167,7 +167,7 @@ html, body {
 
 .text-amt {
   margin-top: 0px;
-  margin-bottom: 65px;
+  margin-bottom: 95px;
   font-size: 15px;
 }
 
