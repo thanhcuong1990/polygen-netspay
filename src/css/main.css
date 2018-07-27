@@ -161,7 +161,7 @@ html, body {
 .text-transaction {
   margin-top: 100px;
   margin-bottom: 0px;
-  font-size: 50px;
+  font-size: 40px;
   color: cornflowerblue;
 }
 
@@ -242,7 +242,7 @@ td {
 .predictions {
   position: absolute;
   width: 100vw;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .predictions button {
