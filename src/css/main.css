@@ -90,7 +90,7 @@ html, body {
   position: absolute;
   background-color: #fff;
   text-align: center;
-  bottom: -70%;
+  bottom: -0%;
   width: 100%;
   height: 70%;
   z-index: 10;
@@ -236,4 +236,16 @@ td {
 .add_another img {
   width: 25px;
   height: 25px;
+}
+
+.predictions {
+  position: absolute;
+  width: 100vw;
+  margin-top: 20px;
+}
+
+.predictions button {
+  margin: 0px 20px 0px 20px;
+  padding: 3px 15px;
+  font-weight: 700;
 }

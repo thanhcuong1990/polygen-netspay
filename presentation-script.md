@@ -25,3 +25,6 @@ This will raise the adoption rate of the users and in the raise the revenue of t
  
 
 When to roll out? as soon as possible.
+
+
+We choose to improve the user experience of the customer because the experience for the merchants are already very seamless. All they need to do is to wait for the payment notification. Wherereas the customer need to do all the job. To encourage usage of QR payment everyday for the customer, we need to automate the transaction experience as seamless as possible. This will in long term, contributes to the increase of user and increased revenue for the payment service provider.
