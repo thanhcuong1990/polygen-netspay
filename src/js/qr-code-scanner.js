@@ -25,11 +25,11 @@ scanner.addListener('scan', function (content) {
 
     $('.animation-loader').fadeOut(400);
     $('#cards').hide();
-    $('#ocbc_card').animate({top:'17.5vh'}, 100);
-    $('.background-fade').fadeIn(500);
-    $('.transaction-details').animate({bottom:'0%'}, 100);
+    $('#ocbc_card').animate({top:'17.5vh'}, 500);
+    $('.background-fade').fadeIn(1000);
+    $('.transaction-details').animate({bottom:'0%'}, 500);
     $('#amount_input').focus();
-  }, 1000);
+  }, 2000);
 });
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {
