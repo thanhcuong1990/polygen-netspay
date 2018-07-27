@@ -69,6 +69,24 @@ $('#button_double_transaction').bind('click touchstart', function() {
   else $('#discount_field').html(`<b>Discount:<strike> $${(added/100).toFixed(2)} </strike> $${(discount/100).toFixed(2)}</b>`);
 });
 
+$('#button_prediction1').bind('click touchstart', function() {
+  event.preventDefault();
+  $('#display_amount').text('S$' + (80/100).toFixed(2));
+  $('#amount_input').val(80);
+});
+
+$('#button_prediction2').bind('click touchstart', function() {
+  event.preventDefault();
+  $('#display_amount').text('S$' + (160/100).toFixed(2));
+  $('#amount_input').val(160);
+});
+
+$('#button_prediction3').bind('click touchstart', function() {
+  event.preventDefault();
+  $('#display_amount').text('S$' + (200/100).toFixed(2));
+  $('#amount_input').val(200);
+});
+
 $('#amount_input').on('keydown', function(event) {
   if (event.which ==  13) {
     var transaction_amount = $(this).val();
