@@ -217,7 +217,7 @@ td {
 .discount-field {
   position: absolute;
   color: crimson;
-  margin-top: 45px;
+  margin-top: 40px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -242,13 +242,13 @@ td {
 .predictions {
   position: absolute;
   width: 100vw;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .predictions button {
   margin: 0px 20px 0px 20px;
-  padding: 6px 15px;
+  padding: 3px 15px;
   font-weight: 700;
-  background-color: #ea9999;
-  color: #333;
+  /* background-color: #ea9999;
+  color: #333; */
 }
