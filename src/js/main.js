@@ -74,15 +74,15 @@ $('#amount_input').on('keydown', function(event) {
     var transaction_amount = $(this).val();
     if (transaction_amount >= 300) transaction_amount -= 50;
     $('.text-transaction').text('S$' + (transaction_amount/100).toFixed(2));
-    $('.animation-loader').fadeIn(1000);
+    $('.animation-loader').fadeIn(300);
     $(this).blur();
     
     setTimeout(() => {
-      $('.animation-loader').fadeOut(800);
+      $('.animation-loader').fadeOut(300);
       $("#myModal").modal();
 
       document.activeElement.blur();
-    }, 3000);
+    }, 800);
     return;
   }
   // var key = event.which-48;
