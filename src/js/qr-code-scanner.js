@@ -23,13 +23,13 @@ scanner.addListener('scan', function (content) {
     default_amount = 150;
     $('#discount_field').text('');
 
-    $('.animation-loader').fadeOut(800);
+    $('.animation-loader').fadeOut(400);
     $('#cards').hide();
     $('#ocbc_card').animate({top:'17.5vh'}, 100);
-    $('.background-fade').fadeIn(1000);
+    $('.background-fade').fadeIn(500);
     $('.transaction-details').animate({bottom:'0%'}, 100);
     $('#amount_input').focus();
-  }, 2000);
+  }, 1000);
 });
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {

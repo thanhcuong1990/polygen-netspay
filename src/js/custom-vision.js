@@ -81,13 +81,13 @@ $.ajax({
       $('.animation-loader').fadeIn(1000);
     
       setTimeout(() => {
-        $('.animation-loader').fadeOut(800);
+        $('.animation-loader').fadeOut(400);
         $('#cards').hide();
         $('#ocbc_card').animate({top:'17.5vh'}, 100);
-        $('.background-fade').fadeIn(1000);
+        $('.background-fade').fadeIn(500);
         $('.transaction-details').animate({bottom:'0%'}, 100);
         $('#amount_input').focus();
-      }, 2000);
+      }, 1000);
     }
     // console.log(JSON.stringify(data, null, 2));
     // window.alert('success');
