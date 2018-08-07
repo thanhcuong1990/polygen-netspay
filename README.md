@@ -22,11 +22,10 @@ To run the web page on your localhost environment. You can run `npm start` on yo
 
 Features and Explanation
 ----------------
-1. Image Recognition - Azure Custom Vision
-    - Scanning of merchant stall and merchant's menu
+1. Image Recognition
 2. Transaction prediction
 3. Keyboard hotkeys
 
-For real implementation, custom vision will not be a suitable API to use since it is Machine Learning based. Custom Vision is great for prediction but for this use case, pattern matching using SURF/BRIEF is more suitable since it is cheaper and the merchant stalls are not going to change much.  
+In this prototype, we use Microsft Azure Custom Vision to simulate the image recognition. For real implementation, custom vision will not be a suitable API to use since it is Machine Learning based. Custom Vision is great for prediction but for this use case, pattern matching using SURF/BRIEF is more suitable since it is cheaper and the merchant stalls are not going to change much.  
 
-Videos on how the application look can be found on the following [directory](https://github.com/charlieangriawan/polygen-netspay/tree/master/video/demo.mp4)
+Video on how the application look can be found on the following [directory](https://github.com/charlieangriawan/polygen-netspay/tree/master/video/demo.mp4)
