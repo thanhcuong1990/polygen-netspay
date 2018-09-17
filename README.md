@@ -29,3 +29,5 @@ Features and Explanation
 In this prototype, we use Microsft Azure Custom Vision to simulate the image recognition. For real implementation, custom vision will not be a suitable API to use since it is Machine Learning based. Custom Vision is great for prediction but for this use case, pattern matching using SURF/BRIEF is more suitable since it is cheaper and the merchant stalls are not going to change much.  
 
 Video on how the application look can be found on the following [directory](https://github.com/charlieangriawan/polygen-netspay/tree/master/video/demo.mp4)
+
+helloworld
